@@ -235,7 +235,7 @@ a {
 
 footer {
 	margin-top: 5%;
-	position: relative;
+	position: absolute;
    	left: 0;
    	bottom: 0;
 	width: 100%;
