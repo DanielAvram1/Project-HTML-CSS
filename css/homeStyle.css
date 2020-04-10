@@ -1,0 +1,129 @@
+
+.grid {
+	margin-top: 5%; 
+	position: relative;
+	display: grid;
+	height: 400px;
+	left: calc(6.5% + 75px);
+	width: calc((100% - 70px)*0.9);
+	grid-template-columns: 30% 30% 30%;
+	grid-template-rows: 45% 45% ;
+  	grid-gap: 3% 20px;
+ 	
+}
+
+.tile {
+	
+	background-color: rgb(100,100,100);
+	border-radius: 5%;
+	width: 100%;
+	transition: 0.3s;
+}
+
+.tile:hover {
+	box-shadow:  0 4px 8px 0 rgba(50, 50, 50, 0.5), 0 6px 20px 0 rgba(50, 50, 50, 0.5);
+}
+
+
+.tile img {
+	
+	margin-top: 5%;
+	margin-left: 5%;
+	height: 70%;
+}
+.tile h2 {
+	position: relative;
+	bottom: 30%;
+	left: 10%; 
+	display: inline;
+	color: white;
+	
+}
+
+.connections {
+	position: relative;
+	left: calc(5% + 70px);
+	width: calc((100% - 70px)*0.9);
+	height: 100px; 
+	background-color: yellow;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin-top: 5%;
+}
+.connections a img{
+	height: 50px;
+	padding: 10px;
+	padding-top: 25px;
+	padding-bottom: 25px; 
+
+	float: right;
+}
+
+.connections a img:hover {
+	animation-name: shake;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.connections span{ 
+	font-size: 230%;
+	font-weight: bold;
+	padding: 10px;
+	padding-top: 30px;
+	padding-bottom: 25px;
+	padding-left: 50px; 
+	float: left;
+}
+
+@media only screen and (max-width: 1000px) {
+
+	.grid {
+		left: 12%;
+		width: 80%;
+	
+		margin-top: 5%; 
+		position: relative;
+		display: grid;
+		height: 600px;
+		grid-template-columns: 45% 45%;
+		grid-template-rows: 30% 30% 30%;
+	  	grid-gap: 2.5% 20px;
+ 	
+	}
+	.tile {
+		text-align: center;
+	}
+	.tile h2 {
+		display: none;		
+	}
+	.tile img {
+		
+		margin-top: 5%;
+		height: 70%;
+		width: auto;
+	}
+	.connections {
+		left: 10%;
+		width: 80%;
+	}
+
+	.connections img {
+		display: none;
+	}
+
+}

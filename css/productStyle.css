@@ -1,0 +1,152 @@
+.productFlex {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	width: 1020px;
+	left: calc(10% + 35px);
+}
+
+.column {
+	flex: 50%;
+}
+.price, .photo, .description, .variants {
+	display: block;
+	background-color: white;
+	margin-top: 20px; 
+	border-radius: 5px;
+	flex: 50%;
+}
+
+.photo {
+	height: 500px;
+	width: 500px;
+	border-radius: 10px;
+
+}
+
+.photo img {
+	width: 100%;
+	transition: 0.2s;
+	
+}
+
+.photo img:hover {
+	animation-name: marit;
+	animation-duration: 0.3s;
+	transition: 0.2s;
+	transform: scale(1.2);
+}
+
+@keyframes marit {
+	0% {transform: scale(1)}
+	100%{transform: scale(1.2)}
+}
+
+.variants, .price, .description{
+	padding: 20px;
+	width: 460px;
+	border-radius: 10px;
+}
+
+.description {
+	width: 460px;
+	background-color: rgb(40,40,40, 0);
+}
+.description table {
+	width: 450px;
+	color: white;
+	margin-top: 20px; 
+	border-collapse: collapse;
+
+	
+}
+.description table tr td, .description table tr th{
+	padding: 15px;
+	font-size: 150%;
+	border: 0px;
+
+	
+}
+
+.description table tr th{
+	font-size: 170%;
+
+}
+.description table tr:nth-child(even){
+	background-color:  rgb(30,30,30);
+}
+.description table tr:nth-child(odd){
+	background-color: black;
+}
+.first{
+
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+
+.variants {
+	color: black;
+	padding: 5px;
+}
+
+.variants table {
+	width: 100%;
+	color: white;
+	
+	border-collapse: collapse;
+}
+
+.variants table tr td {
+	color: black;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 170%;
+}
+
+.variants table tr td button {
+	padding: 20px;
+	border-radius: 20px;
+	border: solid black 2px;
+	display: inline;
+}
+
+.price {
+	padding: 5px;
+}
+
+.price table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.price table tr td {
+	font-size: 170%;
+	text-align: center;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.price table tr td button {
+	width: 90%;
+	height: 50px;
+	font-size: 80%;
+	text-align: center;
+	font-weight: bold;
+	background-color: orange;
+	border: none;
+	border-radius: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.productFlex {
+		left: calc(10% + 10px);
+	}
+	.column {
+		flex: 100%;
+	}
+	.price, .variants, .description {
+		width: 500px;
+	}
+}

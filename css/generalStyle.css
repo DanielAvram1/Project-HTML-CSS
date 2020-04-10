@@ -1,0 +1,356 @@
+
+@font-face {
+ 	font-family: 'denumire';
+ 	src: url(assets/ImperatorCapsBold.ttf);
+}
+body {
+	background-color: rgb(40,40,40);
+	background-image: linear-gradient(rgb(40,40,40), black);
+	font-family: Arial, 'Lucida Sans Unicode';
+	font-size: 80%;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+.sideBar {
+	
+	position: fixed;
+	background-color:  rgb(30,30,30);
+	left:0;
+	top:0;
+	height: 100%;
+	width: 70px;
+	z-index: 2;
+}
+
+.searchBarimg {
+	float:right;
+	margin-right: 30px; 
+	margin-top: 10px;
+	height: 70%;
+	position: relative;
+	animation-name: ichor;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+
+}
+
+@keyframes ichor {
+	0% {top:0px;}
+	50% {top: 15px;}
+	
+	100% {top:0px;}
+}
+
+.searchBarimg img {
+	height: 90%;
+	
+}
+
+.sideBar ul {
+	padding-left: 0; 
+}
+
+.sideBar ul li {
+	display: block;
+	width: calc(100% - 2px);
+	background-color: rgba(256, 256, 256, 0.3);
+	height: 90px;
+	position: relative;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.sideBar ul li a, .sideBar ul li span{
+	position: absolute;
+	display: block;
+	width: 94%;
+	height: 94%;
+	border-radius: 5px;
+
+}
+.sideBar ul li a img, .sideBar ul li span img{
+	position: absolute;
+	left: 5%;
+	top: 5%;
+	width: 90%;
+	height: auto;
+
+}
+.sideBar ul li a p, .sideBar ul li span p {
+	font-size: 20px;
+	position: absolute;
+	text-align: center;	
+	top: 50%;
+	width: 90%;
+	height: 90%;
+	color: white;
+}
+
+
+
+.dropDownMenu {
+	
+	position: fixed;
+	background-color: rgb(60,60,60);
+	left:70px;
+	top:0;
+	height: 100%;
+	width: 0px;
+	
+	visibility: hidden;
+	transition: 0.3s;
+}
+.dropDownMenu h3, .dropDownMenu ul {
+	opacity: 0;
+	transition: 0.2s;
+}
+.dropDownMenu h3 {
+	font-size: 200%;
+}
+
+.sideBar ul li span:hover .dropDownMenu{
+	width: 300px;
+	visibility: visible;
+}
+.sideBar ul li span:hover .dropDownMenu h3, .sideBar ul li span:hover .dropDownMenu ul {
+	opacity: 100%;
+}
+
+.dropDownMenu ul li {
+	display: block;
+	width: calc(100% - 2px);
+	background-color: rgba(256, 256, 256, 0);
+	height: 50px;
+	position: relative;
+	border-radius: 0px;
+	border-width: 0px 0px 2px 0px;
+}
+
+.dropDownMenu ul li a {
+	transition: 0.2s;
+}
+
+.dropDownMenu ul li a:hover {
+	position: relative;
+	left:20px;
+
+}
+
+
+.sideBar ul li span	.dropDownMenu ul li p{
+	text-align: left;
+	color: black;
+	font-size: 20px;
+	position: absolute;
+	text-align: left;
+	left: 0%;
+	top: 0%;
+	width: 90%;
+	height: 100%;
+	color: black;
+	display: none;
+	transition: 0.2s;
+}
+.sideBar ul li span:hover .dropDownMenu ul li p{
+	display: inline;
+}
+
+.searchBar {
+	position: relative;
+	display: block;
+	background-color: black;
+	margin-top: 3%;
+	left: calc(5% + 70px);
+	width: calc((100% - 70px)*0.9);
+	height: 100px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.search {
+	position: absolute;	
+	left: 15%;
+	top: 25%;
+	width: 70%;
+	height: 50%;
+	background-color: gray;
+	border: 1px solid gray;
+  	border-radius: 4px;
+  	box-sizing: border-box;
+  	font-size: 30px;
+}
+
+.search button {
+
+	float: right;
+	background-color: rgb(0,0,0,0);
+	border: none;
+	cursor: pointer;
+}
+
+.search button img{
+	position: relative;
+	top: 3px;
+	margin: 0;
+	padding: 0;
+	width: 40px;
+}
+
+.search input {
+	position: absolute;
+	
+	width: calc(100% - 50px) ;
+	height:100%;
+	background-color: white;
+	border: 1px solid white;
+  	border-radius: 4px;
+  	box-sizing: border-box;
+  	font-size: 30px;
+}
+
+.adds {
+	position: relative;
+	left: calc(15% + 70px);
+	width: calc((100% - 70px)*0.7);
+	margin-top: 5%;
+	
+	
+}
+.adds img {
+	width: 100%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+
+
+
+footer {
+	margin-top: 5%;
+	position: relative;
+   	left: 0;
+   	bottom: 0;
+	width: 100%;
+	background-color: grey;
+	height: 70px;
+	background-image: url("icons/sideBarBG.jpg");
+}
+
+footer p { 
+	width: 100%;
+	padding-top: 20px; 
+	color: white;
+	font-size: 170%;
+	text-align: center;
+
+
+}
+
+@media only screen and (max-width: 1000px) {
+	.adds {
+		display: none;
+	}
+	
+
+	.sideBar {
+		position: fixed;
+		background-color:  rgb(30,30,30);
+		left:0;
+		top:0;
+		width: 100%;
+		height: 70px;
+		z-index: 2;
+	}
+	.sideBar ul {
+		list-style: none;
+		margin: 0 auto;
+	}
+	.sideBar ul li {
+		display: inline-block;
+		height: 68px;
+		width: 68px;
+		position: relative;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+	.sideBar ul li a, .sideBar ul li span{
+		position: absolute;
+		left: 3%;
+		top:3%;
+		width: 94%;
+		height: 94%;
+		border-radius: 5px;
+			
+
+	}
+	.sideBar ul li a img, .sideBar ul li span img{
+		
+		height: 60px;
+		width: auto;
+
+	}
+	.sideBar ul li a p , .sideBar ul li span p {
+		display: none;
+	}
+
+
+
+	.dropDownMenu {
+	
+		position: fixed;
+		
+		left:0px;
+		top:70px;
+		height: 0;
+		width: 300px;
+		
+		visibility: hidden;
+		transition: 0.3s;
+	}
+	.dropDownMenu h3, .dropDownMenu ul {
+		opacity: 0;
+		transition: 0.2s;
+	}
+
+	.sideBar ul li span:hover .dropDownMenu{
+		height: 100%;
+	}
+	.sideBar ul li span:hover .dropDownMenu h3, .sideBar ul li span:hover .dropDownMenu ul {
+		opacity: 100%;
+	}
+
+	.dropDownMenu ul li {
+		display: block;
+		width: 100%;
+		background-color: rgba(256, 256, 256, 0);
+		height: 50px;
+		position: relative;
+		border-radius: 0px;
+		border-width: 0px 0px 2px 0px;
+	}
+	.dropDownMenu ul li p{
+		display: inline;
+		transition: 0.2s;
+	}
+
+	.searchBar {
+		margin-top: calc(3% + 70px); 
+		left: 10%;
+		width: 80%;
+	}
+	.searchBarimg {
+		display: none;
+	}
+	
+
+	
+
+}
